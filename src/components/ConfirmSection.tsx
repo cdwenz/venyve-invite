@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function ConfirmSection() {
   const [loading, setLoading] = useState(false);
+  const [confirmed, setConfirmed] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -25,11 +26,79 @@ export default function ConfirmSection() {
 
     setLoading(false);
 
-    alert("Presencia confirmada.");
+    setConfirmed(true);
+  }
+
+  if (confirmed) {
+    return (
+      <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-black">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.92, y: 40 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
+          className="
+          relative
+          w-full
+          max-w-sm
+          rounded-4xl
+          overflow-hidden
+          border
+          border-[#D6B98A]/20
+          bg-[#0A0A0A]
+          p-8
+          shadow-[0_0_80px_rgba(214,185,138,0.08)]
+        "
+        >
+          {/* perforaciones ticket */}
+          <div className="absolute left-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-black border border-white/5" />
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 w-6 h-6 rounded-full bg-black border border-white/5" />
+
+          {/* logo */}
+          <div className="flex justify-center mb-8 opacity-70">
+            <img src="/logo.svg" alt="Ven y Ve" className="w-14" />
+          </div>
+
+          <p className="text-center text-xs tracking-[0.4em] text-[#D6B98A]/70 uppercase">
+            Acceso confirmado
+          </p>
+
+          <h2 className="mt-6 text-center text-3xl font-light leading-relaxed text-white">
+            Estás a punto de experimentar las bondades de Dios.
+          </h2>
+
+          <div className="my-10 border-t border-dashed border-white/10" />
+
+          <div className="space-y-4 text-center">
+            <p className="text-white/40 uppercase text-xs tracking-[0.3em]">
+              Evento
+            </p>
+
+            <p className="text-white text-xl font-light">Ven y Ve</p>
+
+            <p className="text-[#D6B98A] tracking-[0.25em] text-sm">
+              Sábado 16 · 19:30 HS
+            </p>
+          </div>
+
+          <div className="mt-12">
+            <div className="h-14 rounded-xl bg-white/5 flex items-center justify-center tracking-[0.5em] text-white/30 text-xs">
+              VV-2026-ACCESS
+            </div>
+          </div>
+
+          <p className="mt-10 text-center text-xs text-white/20 tracking-[0.2em] uppercase">
+            La ubicación será enviada personalmente.
+          </p>
+        </motion.div>
+      </section>
+    );
   }
 
   return (
-    <section id="CONFIRM" className="relative min-h-screen flex items-center justify-center px-6 py-10">
+    <section
+      id="CONFIRM"
+      className="relative min-h-screen flex items-center justify-center px-6 py-10"
+    >
       <motion.div
         initial={{ opacity: 0, y: 90 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -82,12 +151,7 @@ export default function ConfirmSection() {
           <div className="mb-10 text-center">
             <div className="mb-12 flex justify-center">
               <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center backdrop-blur-md">
-                <Image
-                  src="/logo.svg"
-                  alt="Ven y Ve"
-                  width={64}
-                  height={64}
-                />
+                <Image src="/logo.svg" alt="Ven y Ve" width={64} height={64} />
               </div>
             </div>
 

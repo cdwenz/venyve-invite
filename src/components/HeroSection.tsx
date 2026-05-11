@@ -11,7 +11,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden px-6">
+    <section className="relative h-screen flex flex-col items-center justify-start overflow-hidden px-6 pt-6">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_55%)]" />
 
       <motion.div

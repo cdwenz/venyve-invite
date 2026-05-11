@@ -97,7 +97,7 @@ export default function ConfirmSection() {
   return (
     <section
       id="CONFIRM"
-      className="relative min-h-screen flex items-center justify-center px-6 py-10"
+      className="relative min-h-screen flex items-start justify-center px-6 py-6"
     >
       <motion.div
         initial={{ opacity: 0, y: 90 }}

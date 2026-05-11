@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function ConfirmSection() {
@@ -38,10 +39,15 @@ export default function ConfirmSection() {
       >
         <div className="mb-10 text-center">
           <div className="mb-12 flex justify-center">
-          <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center backdrop-blur-md">
-            <img src={"/venyve_simple.svg"} alt="logo" />
+            <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center backdrop-blur-md">
+              <Image
+                src="/venyve_simple.svg"
+                alt="Ven y Ve"
+                width={64}
+                height={64}
+              />
+            </div>
           </div>
-        </div>
 
           <h2 className="text-2xl font-light">
             Charlas informales sobre Jesús.

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HeroSection() {
 
@@ -21,7 +22,12 @@ export default function HeroSection() {
       >
         <div className="mb-12 flex justify-center">
           <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center backdrop-blur-md">
-            <img src={"/venyve_simple.svg"} alt="logo" />
+            <Image
+              src="/venyve_simple.svg"
+              alt="Ven y Ve"
+              width={64}
+              height={64}
+            />
           </div>
         </div>
 

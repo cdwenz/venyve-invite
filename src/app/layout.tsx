@@ -13,8 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://venyve-invite.vercel.app"),
+
   title: "Ven y ve - inscripción",
   description: "Formulario de inscripción Ven y Ve",
+
   openGraph: {
     title: "Ven y ve - inscripción",
     description: "Formulario de inscripción Ven y Ve",
@@ -22,14 +25,20 @@ export const metadata: Metadata = {
     siteName: "HardCode Technologies",
     images: [
       {
-        url: "https://venyve-invite.vercel.app/preview.png",
+        url: "/preview.jpg",
         width: 1200,
         height: 630,
-        alt: "Ven y Ve",
       },
     ],
     locale: "es_AR",
     type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Ven y ve - inscripción",
+    description: "Formulario de inscripción Ven y Ve",
+    images: ["/preview.jpg"],
   },
 };
 

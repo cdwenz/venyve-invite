@@ -21,7 +21,7 @@ export default function ExperienceCard() {
       >
         <div className="absolute top-6 right-6 text-white/10 text-5xl font-thin">
           <Image
-            src="/venyve_simple.svg"
+            src="/logo.svg"
             alt="Ven y Ve"
             width={64}
             height={64}

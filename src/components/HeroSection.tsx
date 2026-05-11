@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div className="mb-12 flex justify-center">
           <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center backdrop-blur-md">
             <Image
-              src="/venyve_simple.svg"
+              src="/logo.svg"
               alt="Ven y Ve"
               width={64}
               height={64}

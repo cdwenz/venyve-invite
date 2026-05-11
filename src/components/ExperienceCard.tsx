@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function ExperienceCard() {
   const handleScroll = () => {
@@ -20,11 +19,9 @@ export default function ExperienceCard() {
         className="relative z-10 w-full max-w-sm rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-2xl p-8"
       >
         <div className="absolute top-6 right-6 text-white/10 text-5xl font-thin">
-          <Image
+          <img
             src="/logo.svg"
             alt="Ven y Ve"
-            width={64}
-            height={64}
             style={{ opacity: '25%' }}
           />
         </div>

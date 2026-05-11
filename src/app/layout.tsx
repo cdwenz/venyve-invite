@@ -14,7 +14,23 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ven y ve - inscripción",
-  description: "HardCode Technologies",
+  description: "Formulario de inscripción Ven y Ve",
+  openGraph: {
+    title: "Ven y ve - inscripción",
+    description: "Formulario de inscripción Ven y Ve",
+    url: "https://venyve-invite.vercel.app",
+    siteName: "HardCode Technologies",
+    images: [
+      {
+        url: "https://venyve-invite.vercel.app/preview.png",
+        width: 1200,
+        height: 630,
+        alt: "Ven y Ve",
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

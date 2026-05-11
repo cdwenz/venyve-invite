@@ -21,7 +21,7 @@ export default function HeroSection() {
         className="relative z-10 text-center"
       >
         <div className="mb-12 flex justify-center">
-          <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center backdrop-blur-md">
+          <div className="w-20 h-20 border border-[#D6B98A]/20 rounded-full flex items-center justify-center backdrop-blur-md">
             <Image
               src="/logo.svg"
               alt="Ven y Ve"
@@ -38,7 +38,7 @@ export default function HeroSection() {
         <motion.button
           onClick={handleScroll}
           whileTap={{ scale: 0.95 }}
-          className="mt-16 border border-white/20 px-8 py-3 rounded-full text-sm uppercase tracking-[0.3em] backdrop-blur-md"
+          className="mt-16 border border-[#FFF5EB]/20 px-8 py-3 rounded-full text-sm text-[#D6B98A] uppercase tracking-[0.3em] backdrop-blur-md cursor-pointer"
         >
           Ven y ve
         </motion.button>
@@ -49,7 +49,7 @@ export default function HeroSection() {
         aria-label="Scroll hacia abajo"
       >
         <span className="text-xs tracking-widest uppercase font-light">Scroll</span>
-        <i className="ri-arrow-down-line animate-bounce text-lg"></i>
+        <i className="ri-arrow-down-line animate-bounce text-lg">↓</i>
       </button>
     </section>
   );

@@ -19,7 +19,7 @@ export default function ExperienceCard() {
         className="relative z-10 w-full max-w-sm rounded-[32px] border border-white/10 bg-white/5 backdrop-blur-2xl p-8"
       >
         <div className="absolute top-6 right-6 text-white/10 text-5xl font-thin">
-          <img src={"/Venyve_simple.svg"} style={{ opacity: '25%' }} />
+                      <img src={"/venyve_simple.svg"} alt="logo" style={{ opacity: '25%' }} />
         </div>
 
         <p className="text-center text-white/80 text-lg leading-relaxed font-light">

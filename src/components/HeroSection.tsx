@@ -21,7 +21,7 @@ export default function HeroSection() {
       >
         <div className="mb-12 flex justify-center">
           <div className="w-16 h-16 border border-white/10 rounded-full flex items-center justify-center backdrop-blur-md">
-            <img src={"/Venyve_simple.svg"} />
+            <img src={"/venyve_simple.svg"} alt="logo" />
           </div>
         </div>
 

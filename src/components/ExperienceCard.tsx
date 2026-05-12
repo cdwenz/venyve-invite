@@ -9,26 +9,25 @@ export default function ExperienceCard() {
   };
 
   return (
-    <section id="EXPERIENCE" className="min-h-screen flex items-start justify-center px-5 py-6 relative">
+    <section id="EXPERIENCE" className="min-h-screen flex items-center justify-center px-5 relative">
       <div className="absolute inset-0 bg-linear-to-b from-black via-zinc-950 to-black" />
 
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.3 }}
-        className="relative z-10 w-full max-w-sm rounded-4xl"
+        className="relative z-10 w-full max-w-sm rounded-4xl flex flex-col justify-around"
       >
         {/* Glow animado */}
         <div className="absolute -inset-0.5 overflow-hidden rounded-[34px]">
           <motion.div
             animate={{
-              x: ["-20%", "20%", "-10%"],
-              y: ["-20%", "25%", "10%"],
+              x: ["-35%", "25%", "35%", "-20%", "-35%"],
+              y: ["-30%", "-15%", "30%", "20%", "-30%"],
             }}
             transition={{
-              duration: 5,
+              duration: 18,
               repeat: Infinity,
-              repeatType: "mirror",
               ease: "easeInOut",
             }}
             className="
@@ -46,7 +45,7 @@ export default function ExperienceCard() {
         </div>
 
         {/* Card */}
-        <div className="relative rounded-4xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 overflow-hidden shadow-[0_0_80px_rgba(214,185,138,0.08)]">
+        <div className="relative h-[80vh] rounded-4xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 overflow-hidden shadow-[0_0_80px_rgba(214,185,138,0.08)] flex flex-col items-center justify-around">
 
           {/* brillo interno suave */}
           <div className="absolute inset-0 bg-linear-to-br from-[#D6B98A]/5 via-transparent to-transparent pointer-events-none" />

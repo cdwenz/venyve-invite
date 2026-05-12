@@ -11,7 +11,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative h-screen flex flex-col items-center justify-start overflow-hidden px-6 pt-6">
+    <section className="relative h-screen flex flex-col items-center justify-around overflow-hidden px-6">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_55%)]" />
 
       <motion.div
@@ -45,7 +45,7 @@ export default function HeroSection() {
       </motion.div>
       <button
         onClick={handleScroll}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/50 hover:text-white/80 transition-colors duration-300 cursor-pointer"
+        className="bottom-8 flex flex-col items-center justify-center gap-1 text-white/50 hover:text-white/80 transition-colors duration-300 cursor-pointer"
         aria-label="Scroll hacia abajo"
       >
         <span className="text-xs tracking-widest uppercase font-light">Scroll</span>

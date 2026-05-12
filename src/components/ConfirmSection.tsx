@@ -7,27 +7,55 @@ import { useState } from "react";
 export default function ConfirmSection() {
   const [loading, setLoading] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
+  const [phone, setPhone] = useState("");
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  const formatPhone = (input: string) => {
+    let value = input.replace(/\D/g, "");
 
-    setLoading(true);
+    // eliminar 15 después de cod área
+    value = value.replace(/^54(\d{2,4})15/, "54$1");
 
-    const formData = new FormData(e.currentTarget);
+    // asegurar prefijo 54
+    if (!value.startsWith("54")) {
+      value = "54" + value;
+    }
 
-    await fetch("/api/rsvp", {
-      method: "POST",
-      body: JSON.stringify({
-        name: formData.get("name"),
-        phone: formData.get("phone"),
-        email: formData.get("email"),
-      }),
-    });
+    // limitar longitud
+    value = value.slice(0, 13);
 
-    setLoading(false);
+    const match = value.match(/^54(\d{2,4})(\d{0,8})$/);
 
-    setConfirmed(true);
-  }
+    if (!match) return "+" + value;
+
+    const area = match[1];
+    const number = match[2];
+
+    return `+54 ${area} ${number}`.trim();
+  };
+
+ async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  e.preventDefault();
+
+  setLoading(true);
+
+  const formData = new FormData(e.currentTarget);
+
+  await fetch("/api/rsvp", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: formData.get("name"),
+      phone: phone.replace(/\D/g, ""),
+      email: formData.get("email"),
+    }),
+  });
+
+  setLoading(false);
+
+  setConfirmed(true);
+}
 
   if (confirmed) {
     return (
@@ -168,12 +196,25 @@ export default function ConfirmSection() {
               className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none text-white placeholder:text-white/30"
             />
 
+
             <input
+              name="phone"
+              type="tel"
+              placeholder="+54 299 5278978"
+              required
+              value={phone}
+              onChange={(e) => {
+                setPhone(formatPhone(e.target.value));
+              }}
+              className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none text-white placeholder:text-white/30"
+            />
+            
+            {/* <input
               name="phone"
               placeholder="Teléfono"
               required
               className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none text-white placeholder:text-white/30"
-            />
+            /> */}
 
             <input
               name="email"

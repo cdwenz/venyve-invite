@@ -27,6 +27,7 @@ export async function POST(req: Request) {
           body.phone,
           body.email,
           new Date().toISOString(),
+          "Pendiente"
         ],
       ],
     },

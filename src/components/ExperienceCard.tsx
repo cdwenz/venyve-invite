@@ -9,7 +9,7 @@ export default function ExperienceCard() {
   };
 
   return (
-    <section id="EXPERIENCE" className="min-h-screen flex items-center justify-center px-5 relative">
+    <section id="EXPERIENCE" className="min-h-dvh flex items-center justify-center px-5 relative">
       <div className="absolute inset-0 bg-linear-to-b from-black via-zinc-950 to-black" />
 
       <motion.div

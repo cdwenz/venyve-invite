@@ -45,7 +45,7 @@ export default function ExperienceCard() {
         </div>
 
         {/* Card */}
-        <div className="relative h-[80vh] rounded-4xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 overflow-hidden shadow-[0_0_80px_rgba(214,185,138,0.08)] flex flex-col items-center justify-around">
+        <div className="relative h-[80dvh] rounded-4xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 overflow-hidden shadow-[0_0_80px_rgba(214,185,138,0.08)] flex flex-col items-center justify-around">
 
           {/* brillo interno suave */}
           <div className="absolute inset-0 bg-linear-to-br from-[#D6B98A]/5 via-transparent to-transparent pointer-events-none" />
@@ -58,14 +58,18 @@ export default function ExperienceCard() {
             />
           </div>
 
-          <p className="text-center text-white/80 text-lg leading-relaxed font-light">
-            Vení y experimentá que
-          </p>
+          <div className="text-center">
 
-          <p className="text-center text-white/80 text-lg leading-relaxed font-light">
-            DIOS ES BUENO
-          </p>
 
+            <p className="text-center text-white/80 text-lg leading-relaxed font-light">
+              Vení y experimentá que
+            </p>
+
+            <p className="text-center text-white/80 text-lg leading-relaxed font-light">
+              DIOS ES BUENO
+            </p>
+
+          </div>
           <div className="mt-14 text-center">
             <p className="text-3xl font-thin tracking-[0.2em]">
               Sábado 16
